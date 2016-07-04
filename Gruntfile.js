@@ -86,6 +86,9 @@ module.exports = function(grunt) {
 			},
 			src: ['**']
 		},
+		exec: {
+			echo_something: 'node linkedin.js'
+		}
 	});
 
 	// Load plugin(s).
@@ -95,6 +98,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.loadNpmTasks('grunt-contrib-stylus');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-exec');
 	grunt.loadNpmTasks('grunt-gh-pages');
 	
 	
@@ -102,5 +106,6 @@ module.exports = function(grunt) {
 
 	// Define task(s).
 	grunt.registerTask('dev', ['clean', 'copy', 'pug', 'stylus', 'browserSync', 'watch']);
-	grunt.registerTask('deploy', ['clean', 'copy', 'pug', 'stylus','gh-pages'])
+	grunt.registerTask('deploy', ['clean', 'copy', 'pug', 'stylus','gh-pages']);
+	grunt.registerTask('update', ['exec','clean', 'copy', 'pug', 'stylus']);
 };
