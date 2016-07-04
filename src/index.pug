@@ -1,0 +1,136 @@
+doctype html
+html
+    head
+        title Oliver Dooley &#8211; Curriculum vitae
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0")
+        meta(name="description" content="Oliver Dooley's curriculum vitae")
+        //- CSS
+        link( href='css/canary-template.css' rel='stylesheet' media='screen' )
+        link( href='css/canary-print.css' rel='stylesheet' media='print' )
+        link( href='css/fonts.css' rel='stylesheet' media='all' )
+
+    body
+        //- HEADER 
+        header#header-wrapper
+            .header-content
+                p #[a( href=linkedin.publicProfile target="_blank" ) LinkedIn Profile #[span.icon.icon--open_in_new]]
+        //- CV
+        #canary-wrapper
+            main.canary-content
+                .block
+                    .bar
+                header
+                    .block
+                        h1.intro-header #{linkedin.fullName}
+                        p.intro-paragraph !{linkedin.summary.replace(/(?:\r\n|\r|\n)/g, '<br />')}
+                .content
+                    .main
+                        .block
+                            h2 Curriculum vitae
+                            .flex-grid.thirds
+                                .col-one-third
+                                    h3 Experience
+                                .col-two-thirds
+                                    each item, index in linkedin.experience
+                                        .section-item
+                                            .title
+                                                h4 #{item.role}
+                                                p.small #{item.company}
+                                                span.small.time
+                                                    if item.endTime
+                                                        time #{item.startTime}
+                                                        |&nbsp;&ndash;&nbsp;
+                                                        time #{item.endTime}
+                                                    else 
+                                                        time #{item.startTime}
+                                                        |&nbsp;&ndash;&nbsp;Present
+                                                    if item.location
+                                                        |&nbsp;&nbsp;|&nbsp;&nbsp;#{item.location}
+                                            if item.description
+                                                p.description !{item.description.replace(/(?:\r\n|\r|\n)/g, '<br />')}
+                    .aside
+                        .block
+                            .print
+                                hr
+                                .flex-grid.thirds
+                                    .col-one-third
+                                        h3 Contact details
+                                    .col-two-thirds
+                                        ul.list-none
+                                            li +65 9759 649
+                                            li #[a( href="mailto:oliver.dooley@gmail.com" target="_blank" ) oliver.dooley@gmail.com]
+                                            li #[a( href=linkedin.publicProfile target="_blank" ) LinkedIn Profile #[span.icon.icon--open_in_new]]
+                            .aside-group                
+                                hr
+                                .flex-grid.thirds
+                                    .col-one-third
+                                        h3 Education
+                                    .col-two-thirds
+                                        each item, index in linkedin.education
+                                            .section-item
+                                                .title
+                                                    h4 #{item.degree}
+                                                    p.small #{item.institute}
+                                                    span.small.time
+                                                        if item.endTime
+                                                            time #{item.startTime}
+                                                            |&nbsp;&ndash;&nbsp;
+                                                            time #{item.endTime}
+                                                        else 
+                                                            time #{item.startTime}
+                                                            |&nbsp;&ndash;&nbsp;Present
+                                                        if item.location
+                                                            |&nbsp;|&nbsp;#{item.location}
+                                                if item.description
+                                                    p.description !{item.description.replace(/(?:\r\n|\r|\n)/g, '<br />')}
+                            .aside-group
+                                hr
+                                .flex-grid.thirds
+                                    .col-one-third
+                                        h3 Awards
+                                    .col-two-thirds
+                                        each item, index in linkedin.awards
+                                            .section-item
+                                                .title
+                                                    h4 #{item.award}
+                                                    p.small #{item.organisation}
+                                                    if item.time
+                                                        span.small.time
+                                                            if item.time
+                                                                time #{item.time}
+                                                if item.description
+                                                    p.description !{item.description.replace(/(?:\r\n|\r|\n)/g, '<br />')}
+                            if linkedin.interests
+                                .aside-group
+                                    hr
+                                    .flex-grid.thirds
+                                        .col-one-third
+                                            h3 Interests
+                                        .col-two-thirds
+                                            .section-item
+                                                p !{linkedin.interests.replace(/(?:\r\n|\r|\n)/g, '<br />')}
+                .block#recommendations
+                    h2 Recommendations
+                    each item, index in linkedin.recommendations
+                        .section-item
+                            .quote
+                                blockquote #{item.quote}
+                                cite
+                                    //- p #[img.circle(src="img/"+item.photo alt=item.fullName)]
+                                    h4 #{item.fullName}
+                                    p.small #{item.role}
+
+        //- FOOTER
+        footer#footer-wrapper
+            .footer-content.center
+                h3 Want to make something great together? 
+                    span.nowrap #[a(href="mailto:oliver.dooley@gmail.com") Talk to me].
+                
+                ul.list-inline.small
+                    li Singapore
+                    li +65 9759 649
+                    li #[a( href="mailto:oliver.dooley@gmail.com" target="_blank" ) oliver.dooley@gmail.com]
+                    li #[a( href=linkedin.publicProfile target="_blank" ) LinkedIn Profile #[span.icon.icon--open_in_new]]
+                    

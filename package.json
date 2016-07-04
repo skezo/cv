@@ -1,0 +1,27 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "CV of Oliver Dooley",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer-stylus": "^0.9.3",
+    "browser-sync": "^2.13.0",
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-gh-pages": "^1.1.0",
+    "osmosis": "^1.0.2",
+    "pug": "^2.0.0-beta3",
+    "pug-cli": "^1.0.0-alpha6",
+    "rupture": "^0.6.1",
+    "stylus": "^0.54.5"
+  },
+  "scripts": {},
+  "author": "Oliver Dooley",
+  "license": "ISC"
+}

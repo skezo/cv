@@ -1,0 +1,192 @@
+.intro-header
+	padding 15px 0
+	+above($md)
+		padding 45px 0
+
+.intro-paragraph
+	margin-bottom 30px
+	font-family "nta", Arial, sans-serif
+	font-size 20px
+	line-height 1.11111
+	font-weight 400
+	text-transform none
+	max-width 27em
+	+above($md)
+		font-size 27px
+		line-height 1.11111
+
+.caption
+	max-width 26em
+
+.quote
+	//max-width 42em
+	margin-bottom 30px
+	display block
+	position relative
+	background #fff
+	padding 15px 20px 15px 32px
+	border-left 7px solid #57da95
+	border-right 1px solid #57da95
+	box-shadow 2px 2px 15px #ccc
+	&:before
+		content "\201C"
+		position absolute
+		left 5px
+		top 0
+		font-size 52px
+		font-family "nta", Arial, sans-serif
+	&:after
+		content ""
+	+above($md)
+		border-left-width 15px
+		border-right-width 2px
+		padding-left 45px
+		&:before
+			left 10px
+			font-size 60px
+
+.center
+	text-align center
+
+.bar 
+	height 10px
+	background-color #57da95
+
+h1
+	font-family "nta", Arial, sans-serif
+	font-size 32px
+	line-height 1.09375
+	text-transform none
+	font-weight bold
+	+above($md)
+		font-size 48px
+		line-height 1.04167
+
+h2
+	font-family: "nta", Arial, sans-serif
+	font-size: 24px
+	line-height: 1.04167
+	font-weight: 400
+	text-transform: none
+	padding-top: 6px
+	padding-bottom: 9px
+	padding-bottom: 1px
+	border-bottom: 5px solid black
+	margin 30px 0 30px
+	+above($md)
+		margin-top 0
+		font-size 36px
+		line-height 1.11111
+
+h3
+	font-family "nta", Arial, sans-serif
+	font-size 20px
+	line-height 1.11111
+	font-weight 400
+	text-transform none
+	padding-top 2px
+	padding-bottom 3px
+	font-weight bold
+	margin 0 0 20px
+	width 100%
+	+above($md)
+		font-size 27px
+		line-height 1.11111
+
+h4
+	font-family "nta", Arial, sans-serif
+	font-size 16px
+	line-height 1.25
+	font-weight 400
+	text-transform none
+	padding-top 7px
+	padding-bottom 3px
+	font-weight bold
+	margin-bottom 0
+	+above($md)
+		font-size 19px
+		line-height 1.31579
+	.title &
+		padding-bottom 0
+
+p 
+	font-family "nta", Arial, sans-serif
+	font-size 16px
+	line-height 1.25
+	font-weight 400
+	text-transform none
+	padding-top 7px
+	padding-bottom 3px
+	+above($md)
+		font-size 19px
+		line-height 1.31579
+
+li
+	font-family "nta", Arial, sans-serif
+
+hr
+	margin 0
+	border solid #bfc1c3
+	border-width: 0 0 1px
+
+
+blockquote
+	margin: 0 0 20px
+	text-align left
+	font-size 16px
+	line-height 1.25
+	font-weight 400
+	font-family "nta", Arial, sans-serif
+	+above($md)
+		text-align justify
+
+cite 
+	text-align left
+	display block
+	font-family "nta", Arial, sans-serif
+	.small 
+		color gray
+.list-none
+	list-style none
+.list-inline
+	list-style none
+	margin 0
+	padding 0
+	& li
+		position relative
+		display block
+		margin-bottom 15px
+		font-family "nta", Arial, sans-serif
+		+above($md)
+			padding 0 12px
+			margin-bottom 0
+			display inline-block
+			&:not(:first-child):before
+				position absolute
+				left -3px
+				top 0
+				content '\00B7'
+
+.nowrap
+	white-space nowrap
+
+.small
+	font-size 14px
+	line-height 1.14286
+	padding-top 0
+	font-family "nta", Arial, sans-serif
+	+above($md)
+		font-size: 16px
+		line-height: 1.25
+
+.time
+	color gray
+
+.section-item
+	margin-bottom 15px
+
+.circle
+	border-radius 50%
+
+.print
+	display none

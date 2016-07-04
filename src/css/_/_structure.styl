@@ -1,0 +1,88 @@
+#header-wrapper
+	background-color #0b0c0c
+	
+#canary-wrapper
+	position relative
+	overflow visible
+	margin 0 auto
+	padding-top 0
+	padding-bottom 30px
+	background transparent
+	color #0b0c0c
+	//border-bottom 10px solid #005ea5
+
+#footer-wrapper
+	//border-top 10px solid #005ea5
+	border-top 1px solid #a1acb2
+	background-color #dee0e2
+	color #454a4c
+	+print
+		background-color transparent
+
+.header-content
+	background-color #0b0c0c
+	max-width 1020px
+	margin 0 auto
+	padding 8px 15px
+	text-align right
+	+above($md)
+		padding 8px 30px
+	a 
+		color #fff 
+		font-size 16px
+		line-height 1.25
+		font-weight 700
+		text-transform none
+		line-height 23px
+		text-decoration none
+		&:hover
+			text-decoration underline
+
+.canary-content
+	display block
+	position relative
+	margin 0 auto
+	width auto
+	max-width 1020px
+
+.footer-content
+	max-width 1020px
+	margin 0 auto
+	padding 20px 15px 60px 15px
+	color #454a4c
+	+above($md)
+		padding 60px 30px
+	a
+		color #454a4c
+
+
+.block
+	padding 0 15px
+	+above($md)
+		padding 0 30px
+
+.flex-grid
+	display block
+	+above($md)
+		display flex
+
+.thirds
+	margin-top 25px
+	margin-bottom 20px
+
+.col-one-third
+	+above($md)
+		width 33.33333%
+		margin-bottom 30px
+		
+.col-two-thirds
+	width 100%
+	+above($md)
+		width 66.66667%
+		margin-bottom 30px
+
+.col
+	width 100%
+	+above($md)
+		width auto
+		flex 1

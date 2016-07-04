@@ -1,0 +1,113 @@
+@import '_/_reset'
+@import '_/_colour'
+@import '_/_basic'
+@import '_/_structure'
+@import '_/_base'
+@import '_/_icons'
+
+#header-wrapper
+	display none
+
+#canary-wrapper
+	padding-bottom 0
+
+#footer-wrapper
+	background-color transparent
+	border-top 0
+	.list-inline
+		list-style none
+		margin 5px auto 0 auto
+		padding 0
+		& li
+			position relative
+			font-family "nta", Arial, sans-serif
+			padding 0 12px
+			margin-bottom 0
+			display inline-block
+			&:first-child
+				padding-left 0
+			&:not(:first-child):before
+				position absolute
+				left -3px
+				top 0
+				content '\00B7'
+	h3
+		margin 25px 0 3px
+		display none
+
+.footer-content
+	padding 0 15px 20px 15px
+	color #0b0c0c
+
+.quote
+	box-shadow none
+
+.bar 
+	display none
+	
+a 
+	text-decoration none !important
+	color #0b0c0c !important
+	&[href^="http"]
+		white-space nowrap
+		text-indent -9999px
+		display inline-block
+		&:after
+			content attr(href)
+			font-size 0.8em
+			text-indent 0
+			float left
+			.footer-content &
+				font-size 1em
+				
+			
+
+h2
+	margin-top 0
+
+.icon 
+	line-height 0.5
+
+.content
+	display flex
+
+.main
+	width 66.66667%
+	
+.aside
+	width 33.33333%
+	margin-top 32px
+	.thirds
+		margin-top 30px
+	.description
+		display none
+	hr
+		border solid #000
+		border-width 0 0 5px
+	.flex-grid
+	.aside-group
+		page-break-inside avoid
+	.time
+		display none
+
+.print
+	display block
+
+.section-item
+	page-break-inside avoid
+
+#recommendations
+	.section-item:nth-of-type(n+5)
+		display none
+	&:after
+		content "\2026More recommendations and information can be found on my LinkedIn profile."
+		font-family "nta", Arial, sans-serif
+		font-size 16px
+		line-height 1.25
+		font-weight 400
+		text-transform none
+		padding-top 7px
+		padding-bottom 3px
+		text-align center
+		display block
+		margin 20px 0
