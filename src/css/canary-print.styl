@@ -35,6 +35,11 @@
 		margin 25px 0 3px
 		display none
 
+.header-content
+.canary-content
+.footer-content
+	max-width none
+
 .footer-content
 	padding 0 15px 20px 15px
 	color #0b0c0c
@@ -52,6 +57,9 @@ a
 		white-space nowrap
 		text-indent -9999px
 		display inline-block
+		.aside &
+			overflow hidden
+			display block
 		&:after
 			content attr(href)
 			font-size 0.8em
@@ -84,9 +92,8 @@ h2
 	hr
 		border solid #000
 		border-width 0 0 5px
-	.flex-grid
 	.aside-group
-		page-break-inside avoid
+		page-break-inside avoid !important
 	.time
 		display none
 
@@ -94,10 +101,10 @@ h2
 	display block
 
 .section-item
-	page-break-inside avoid
+	page-break-inside avoid !important
 
 #recommendations
-	.section-item:nth-of-type(n+5)
+	.section-item:nth-of-type(n+3)
 		display none
 	&:after
 		content "\2026More recommendations and information can be found on my LinkedIn profile."
