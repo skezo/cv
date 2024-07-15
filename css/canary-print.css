@@ -879,3 +879,13 @@ h2 {
     display: block;
     margin: 20px 0
 }
+
+
+ul.description {
+ margin: 0 16px;
+}
+
+#projects,
+.tags {
+    display: none;
+}
