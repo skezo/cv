@@ -612,6 +612,11 @@ h4 {
     padding: 7px 0 3px;
 }
 
+.description ul {
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
 .description,
 p {
     font-family: "nta", Arial, sans-serif;
